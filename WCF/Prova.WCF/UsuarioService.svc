@@ -1,0 +1,5 @@
+﻿<%@ ServiceHost Language="C#" 
+    Debug="true"
+    Service="Prova.WCF.UsuarioService" 
+    CodeBehind="UsuarioService.svc.cs" 
+    %>

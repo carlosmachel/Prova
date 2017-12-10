@@ -1,0 +1,36 @@
+﻿@model Prova.MVC.Models.ResetarSenhaViewModel
+
+@Html.AntiForgeryToken()
+
+<input type="hidden" id="serverJSON" value="@Newtonsoft.Json.JsonConvert.SerializeObject(Model)" />
+
+<hgroup class="title">
+    <h2>@ViewBag.Title</h2>
+</hgroup>
+<div class="col-sm-4">
+    <form data-bind="submit: enviar">
+        <div class="form-group">
+            <label>Email</label>
+            <input class="form-control" type="email" data-bind="value: resetarEmail" disabled="disabled"/>
+        </div>
+        <div class="form-group">
+            <label>Senha Nova</label>
+            <input class="form-control" type="password" data-bind="value: resetarSenha, disable: isLoading" />
+        </div>
+        <div class="form-group">
+            <label>Confirmar Senha</label>
+            <input class="form-control" type="password" data-bind="value: resetarSenhaConfirmacao, disable: isLoading" />
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-default">Enviar</button>
+        </div>
+        <div class="form-group error-messages" data-bind="foreach: errors">
+            <p data-bind="text: $data" />
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/resetarSenha")
+}

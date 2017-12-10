@@ -1,0 +1,22 @@
+﻿@model Prova.MVC.Models.EsqueciSenhaViewModel
+
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/esqueciSenha")
+}
+
+<input type="hidden" id="serverJSON" value="@Newtonsoft.Json.JsonConvert.SerializeObject(Model)" />
+
+<script type="text/javascript"
+        src='https://www.google.com/recaptcha/api.js'></script>
+
+@Html.AntiForgeryToken()
+<div class="wrapper">
+    <form class="form-signin" data-bind="submit: recuperarSenha">
+        <h2>Recuperar Senha</h2>
+        <input class="form-control" type="text" placeholder="Insira seu e-mail" autofocus="" required="" data-bind="value: email, disable: isLoading" />
+        <div class="g-recaptcha" data-sitekey="6LfRZzwUAAAAADVoUa3XN3K0Z1XFflMW0qiwaV7f"></div>
+        <input type="submit" class="btn btn-lg btn-primary btn-block" value="Email Link" data-bind="disable: isLoading" />
+    </form>
+</div>
+

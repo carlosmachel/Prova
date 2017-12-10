@@ -1,0 +1,28 @@
+﻿@model Prova.MVC.Models.AlterarDadosViewModel
+@using Newtonsoft.Json
+@using Newtonsoft.Json.Converters
+
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/alterarDados")
+}
+@Html.AntiForgeryToken()
+
+<input type="hidden" id="serverJSON" value="@Newtonsoft.Json.JsonConvert.SerializeObject(Model)" />
+
+<div class="wrapper">
+    <form class="form-signin" data-bind="submit: enviar, visible: formVisivel">
+        <h2 class="form-signin-heading">Alterar Dados</h2>
+        <input class="form-control" name="nome" type="text" autofocus="" required="" data-bind="value: alterarDadosNome, disable: isLoading" />
+        <input class="form-control" name="email" type="text" required="" data-bind="value: alterarDadosEmail" disabled="disabled" />
+        <button type="submit" class="btn btn-lg btn-primary btn-block" data-bind="disable: isLoading">Enviar</button>
+        <div class="form-group error-messages error" data-bind="foreach: errors">
+            <p data-bind="text: $data" />
+        </div>
+    </form>    
+</div>
+<div class="wrapper" data-bind="visible: confirmacao">
+    <hgroup class="title">
+        <h1>Dados alterados com sucesso</h1>
+    </hgroup>
+</div>

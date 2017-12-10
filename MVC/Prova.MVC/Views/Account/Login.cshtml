@@ -1,0 +1,20 @@
+﻿@section Scripts {
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/login")
+}
+
+@Html.AntiForgeryToken()
+
+<div class="wrapper">
+    <form class="form-signin" data-bind="submit: login">
+        <h2 class="form-signin-heading">Autenticar</h2>
+        <input class="form-control" type="email" name="email" placeholder="E-mail" autofocus="" required="" data-bind="value: loginEmail, disable: isLoading" />
+        <input class="form-control" type="password" name="senha" placeholder="Senha" data-bind="value: loginPassword, disable: isLoading" />
+        <button type="submit" class="btn btn-lg btn-primary btn-block" data-bind="disable: isLoading">Entrar</button>
+        <button type="button" class="btn btn-lg btn-primary btn-block" data-bind="click: criarConta, disable: isLoading">Criar conta</button>
+        <button type="button" class="btn btn-lg btn-primary btn-block" data-bind="click: esqueciMinhaSenha, disable: isLoading">Esqueci minha senha</button>
+        <div class="form-group error-messages error" data-bind="foreach: errors">
+            <p data-bind="text: $data" />
+        </div>
+    </form>
+</div>

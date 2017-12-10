@@ -1,0 +1,21 @@
+﻿@model Prova.MVC.Models.AlterarSenhaViewModel
+
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/alterarSenha")
+}
+
+@Html.AntiForgeryToken()
+<div class="wrapper">
+    <form class="form-signin" data-bind="submit: enviar">
+        <h2 class="form-signin-heading">Alterar Senha</h2>
+        <input class="form-control" type="password" placeholder="Inserir senha antiga" autofocus="" required="" data-bind="value: senhaAntiga, disable: isLoading" />
+        <input class="form-control" type="password" required="" placeholder="Inserir senha nova" data-bind="value: senhaNova, disable: isLoading" />
+        <input class="form-control" type="password" required="" placeholder="Confirme sua senha"  data-bind="value: confirmacaoSenha, disable: isLoading" />
+        <button type="submit" class="btn btn-lg btn-primary btn-block" data-bind="disable: isLoading">Enviar</button>
+        <div class="form-group error-messages error" data-bind="foreach: errors">
+            <p data-bind="text: $data" />
+        </div>
+    </form>
+</div>
+

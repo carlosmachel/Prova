@@ -1,0 +1,1 @@
+﻿<%@ ServiceHost Language="C#" Debug="true" Service="Prova.WCF.ContatoService" CodeBehind="ContatoService.svc.cs" %>

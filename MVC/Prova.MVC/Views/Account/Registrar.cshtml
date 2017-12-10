@@ -1,0 +1,22 @@
+﻿@model Prova.MVC.Models.RegistroViewModel
+@section Scripts {
+    @Scripts.Render("~/bundles/app")
+    @Scripts.Render("~/bundles/registrar")
+}
+
+@Html.AntiForgeryToken()
+<div class="wrapper">
+    <form class="form-signin" data-bind="submit: registrar">
+        <h2 class="form-signin-heading">Registrar</h2>
+        <input name="nome" placeholder="Insira seu nome" class="form-control" type="text" autofocus="" required="" data-bind="value: registroNome, disable: isLoading" />
+        <input name="email" placeholder="Insira seu e-mail" required="" class="form-control" type="email" data-bind="value: registroEmail, disable: isLoading" />        
+        <input name="senha" placeholder="Insira sua senha" class="form-control" type="password" required="" data-bind="value: registroSenha, disable: isLoading" />
+        <input name="confirmarSenha" placeholder="Confirme sua senha" class="form-control" type="password" required="" data-bind="value: registroConfirmacaoSenha, disable: isLoading" />
+        <button type="submit" class="btn btn-lg btn-primary btn-block" data-bind="disable: isLoading">Registrar</button>
+        <div class="form-group error-messages error" data-bind="foreach: errors">
+            <p data-bind="text: $data" />
+        </div>
+    </form>
+</div>
+
+

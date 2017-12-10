@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova.WCF", "WCF\Prova.WCF\Prova.WCF.csproj", "{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova.MVC", "MVC\Prova.MVC\Prova.MVC.csproj", "{3BA0B2AA-6864-4247-B83A-A65D70639908}"
+	ProjectSection(ProjectDependencies) = postProject
+		{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0} = {9A6F75A6-4433-46B4-8F1F-E04166BAFAF0}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MVC", "MVC", "{E3F9D821-D553-4CE4-A74B-D626FBF057AA}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WCF", "WCF", "{3C38ECFD-61F0-4583-A63C-A41B5EE81F15}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova.Infra.Data", "WCF\Prova.Infra.Data\Prova.Infra.Data.csproj", "{F28E19E9-3EA3-42C6-AAE1-AFB3635E8168}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova.Domain", "WCF\Prova.Domain\Prova.Domain.csproj", "{5E38F189-9D1E-4EC5-A24B-ED8D0674CA23}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Prova.Infra.CrossCutting", "WCF\Prova.Infra.CrossCutting\Prova.Infra.CrossCutting.csproj", "{F011DC8E-6022-448F-8A7F-0F21782607EC}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3BA0B2AA-6864-4247-B83A-A65D70639908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BA0B2AA-6864-4247-B83A-A65D70639908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BA0B2AA-6864-4247-B83A-A65D70639908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BA0B2AA-6864-4247-B83A-A65D70639908}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F28E19E9-3EA3-42C6-AAE1-AFB3635E8168}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F28E19E9-3EA3-42C6-AAE1-AFB3635E8168}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F28E19E9-3EA3-42C6-AAE1-AFB3635E8168}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F28E19E9-3EA3-42C6-AAE1-AFB3635E8168}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E38F189-9D1E-4EC5-A24B-ED8D0674CA23}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E38F189-9D1E-4EC5-A24B-ED8D0674CA23}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E38F189-9D1E-4EC5-A24B-ED8D0674CA23}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E38F189-9D1E-4EC5-A24B-ED8D0674CA23}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F011DC8E-6022-448F-8A7F-0F21782607EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F011DC8E-6022-448F-8A7F-0F21782607EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F011DC8E-6022-448F-8A7F-0F21782607EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F011DC8E-6022-448F-8A7F-0F21782607EC}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9A6F75A6-4433-46B4-8F1F-E04166BAFAF0} = {3C38ECFD-61F0-4583-A63C-A41B5EE81F15}
+		{3BA0B2AA-6864-4247-B83A-A65D70639908} = {E3F9D821-D553-4CE4-A74B-D626FBF057AA}
+		{F28E19E9-3EA3-42C6-AAE1-AFB3635E8168} = {3C38ECFD-61F0-4583-A63C-A41B5EE81F15}
+		{5E38F189-9D1E-4EC5-A24B-ED8D0674CA23} = {3C38ECFD-61F0-4583-A63C-A41B5EE81F15}
+		{F011DC8E-6022-448F-8A7F-0F21782607EC} = {3C38ECFD-61F0-4583-A63C-A41B5EE81F15}
+	EndGlobalSection
+EndGlobal
